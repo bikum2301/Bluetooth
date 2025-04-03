@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlueControl">
+
+  <!-- Các TextView và ImageButton hiện có giữ nguyên -->
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:text="Thiết bị đang kết nối"
+      android:textSize="18sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+  <TextView
+      android:id="@+id/textViewMAC"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="Địa chỉ MAC"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView" />
+  <ImageButton
+      android:id="@+id/btnTb1"
+      android:layout_width="116dp"
+      android:layout_height="112dp"
+      android:layout_marginTop="48dp"
+      android:background="@drawable/tbloff"
+      android:contentDescription="Điều khiển thiết bị 1"
+      app:layout_constraintEnd_toStartOf="@+id/btnTb2"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textViewMAC" />
+  <ImageButton
+      android:id="@+id/btnTb2"
+      android:layout_width="116dp"
+      android:layout_height="112dp"
+      android:background="@drawable/tbloff"
+      android:contentDescription="Điều khiển thiết bị 2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/btnTb1"
+      app:layout_constraintTop_toTopOf="@+id/btnTb1" />
+  <TextView
+      android:id="@+id/textV1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="48dp"
+      android:layout_marginEnd="32dp"
+      android:gravity="center_horizontal|center_vertical"
+      android:text="Thông báo"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnTb1" />
+  <ImageButton
+      android:id="@+id/btnDisc"
+      android:layout_width="90dp"
+      android:layout_height="90dp"
+      android:layout_marginTop="32dp"
+      android:background="@drawable/btnotconnect"
+      android:contentDescription="Ngắt kết nối Bluetooth"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textV1" />
+
+  <!-- === THÊM NÚT MỚI ĐỂ ĐIỀU KHIỂN CẢ HAI === -->
+  <Button
+      android:id="@+id/btnAllOn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:text="Bật Cả Hai"
+      app:layout_constraintEnd_toStartOf="@+id/btnAllOff"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnDisc" />
+
+  <Button
+      android:id="@+id/btnAllOff"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Tắt Cả Hai"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/btnAllOn"
+      app:layout_constraintTop_toTopOf="@+id/btnAllOn" />
+  <!-- ======================================== -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
